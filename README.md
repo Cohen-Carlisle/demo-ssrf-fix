@@ -4,7 +4,7 @@ This is a demo repository to show an SSRF vulnerability in a Rails app.
 
 Specifically, this app uses Faraday as an http client. And it creates a connection object with a safe base url.
 
-However, it is still vulnerable to SSRF as providing an absolute path will override the base url.
+However, it is still vulnerable to SSRF as providing an absolute URL will override the base url.
 
 Here is the vulnerable code:
 https://github.com/Cohen-Carlisle/demo-ssrf-fix/blob/d58582849914ce7fa095abb9de88280360205dc9/app/controllers/ssrf_controller.rb#L3-L5
